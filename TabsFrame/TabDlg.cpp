@@ -181,6 +181,7 @@ bool CTabDlg::InsertWnd(int nSel, int nType, int nSubType)
 		item.lParam = (LPARAM)&(m_split);
 		m_tab.InsertItem(nSel, &item);
 		break;
+		// TODO Make class factory for the rest
 	case WT_PEREK_2:
 		CreateNewView(item, "פרק ב", RUNTIME_CLASS(CPerek2), nSubType,
 			nPane, nSel);
