@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2435E3F7-2307-4ED9-86AC-A71C07F25E4D}</ProjectGuid>
+    <RootNamespace>TabsFrame</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.23107.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ScaleVeiw_D.lib;TimeSpeed_D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ScaleVeiw_R.lib;TimeSpeed_R.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BaseSplitter.cpp" />
+    <ClCompile Include="Book.cpp" />
+    <ClCompile Include="BookKeyList.cpp" />
+    <ClCompile Include="BookPage.cpp" />
+    <ClCompile Include="ButtonEx.cpp" />
+    <ClCompile Include="CaliderDlg.cpp" />
+    <ClCompile Include="ChaptersParagraphs.cpp" />
+    <ClCompile Include="DateStr.cpp" />
+    <ClCompile Include="HeadLineView.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MsgView.cpp" />
+    <ClCompile Include="MSlidrCtrl.cpp" />
+    <ClCompile Include="Perek10.cpp" />
+    <ClCompile Include="Perek11.cpp" />
+    <ClCompile Include="Perek12.cpp" />
+    <ClCompile Include="Perek13.cpp" />
+    <ClCompile Include="Perek14.cpp" />
+    <ClCompile Include="Perek15.cpp" />
+    <ClCompile Include="Perek16.cpp" />
+    <ClCompile Include="Perek17.cpp" />
+    <ClCompile Include="Perek18.cpp" />
+    <ClCompile Include="Perek19.cpp" />
+    <ClCompile Include="Perek2.cpp" />
+    <ClCompile Include="Perek20.cpp" />
+    <ClCompile Include="Perek21.cpp" />
+    <ClCompile Include="Perek22.cpp" />
+    <ClCompile Include="Perek23.cpp" />
+    <ClCompile Include="Perek24.cpp" />
+    <ClCompile Include="Perek25.cpp" />
+    <ClCompile Include="Perek26.cpp" />
+    <ClCompile Include="Perek27.cpp" />
+    <ClCompile Include="Perek28.cpp" />
+    <ClCompile Include="Perek29.cpp" />
+    <ClCompile Include="Perek2DBase.cpp" />
+    <ClCompile Include="Perek3.cpp" />
+    <ClCompile Include="Perek30.cpp" />
+    <ClCompile Include="Perek31.cpp" />
+    <ClCompile Include="Perek32.cpp" />
+    <ClCompile Include="Perek33.cpp" />
+    <ClCompile Include="Perek34.cpp" />
+    <ClCompile Include="Perek35.cpp" />
+    <ClCompile Include="Perek36.cpp" />
+    <ClCompile Include="Perek37.cpp" />
+    <ClCompile Include="Perek38.cpp" />
+    <ClCompile Include="Perek39.cpp" />
+    <ClCompile Include="Perek3DBase.cpp" />
+    <ClCompile Include="Perek4.cpp" />
+    <ClCompile Include="Perek41.cpp" />
+    <ClCompile Include="Perek42.cpp" />
+    <ClCompile Include="Perek43.cpp" />
+    <ClCompile Include="Perek44.cpp" />
+    <ClCompile Include="Perek45.cpp" />
+    <ClCompile Include="Perek46.cpp" />
+    <ClCompile Include="Perek47.cpp" />
+    <ClCompile Include="Perek48.cpp" />
+    <ClCompile Include="Perek49.cpp" />
+    <ClCompile Include="Perek5.cpp" />
+    <ClCompile Include="Perek50.cpp" />
+    <ClCompile Include="Perek6.cpp" />
+    <ClCompile Include="Perek7.cpp" />
+    <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Slider.cpp" />
+    <ClCompile Include="SpeedTable.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TabDlg.cpp" />
+    <ClCompile Include="TabExCtrl.cpp" />
+    <ClCompile Include="TabsFrame.cpp" />
+    <ClCompile Include="ToolExBar.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseSplitter.h" />
+    <ClInclude Include="Book.h" />
+    <ClInclude Include="BookKeyList.h" />
+    <ClInclude Include="BookPage.h" />
+    <ClInclude Include="ButtonEx.h" />
+    <ClInclude Include="CaliderDlg.h" />
+    <ClInclude Include="ChaptersParagraphs.h" />
+    <ClInclude Include="DateStr.h" />
+    <ClInclude Include="HeadLineView.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MsgView.h" />
+    <ClInclude Include="MSlidrCtrl.h" />
+    <ClInclude Include="Perek10.h" />
+    <ClInclude Include="Perek11.h" />
+    <ClInclude Include="Perek12.h" />
+    <ClInclude Include="Perek13.h" />
+    <ClInclude Include="Perek14.h" />
+    <ClInclude Include="Perek15.h" />
+    <ClInclude Include="Perek16.h" />
+    <ClInclude Include="Perek17.h" />
+    <ClInclude Include="Perek18.h" />
+    <ClInclude Include="Perek19.h" />
+    <ClInclude Include="Perek2.h" />
+    <ClInclude Include="Perek20.h" />
+    <ClInclude Include="Perek21.h" />
+    <ClInclude Include="Perek22.h" />
+    <ClInclude Include="Perek23.h" />
+    <ClInclude Include="Perek24.h" />
+    <ClInclude Include="Perek25.h" />
+    <ClInclude Include="Perek26.h" />
+    <ClInclude Include="Perek27.h" />
+    <ClInclude Include="Perek28.h" />
+    <ClInclude Include="Perek29.h" />
+    <ClInclude Include="Perek2DBase.h" />
+    <ClInclude Include="Perek3.h" />
+    <ClInclude Include="Perek30.h" />
+    <ClInclude Include="Perek31.h" />
+    <ClInclude Include="Perek32.h" />
+    <ClInclude Include="Perek33.h" />
+    <ClInclude Include="Perek34.h" />
+    <ClInclude Include="Perek35.h" />
+    <ClInclude Include="Perek36.h" />
+    <ClInclude Include="Perek37.h" />
+    <ClInclude Include="Perek38.h" />
+    <ClInclude Include="Perek39.h" />
+    <ClInclude Include="Perek3DBase.h" />
+    <ClInclude Include="Perek4.h" />
+    <ClInclude Include="Perek41.h" />
+    <ClInclude Include="Perek42.h" />
+    <ClInclude Include="Perek43.h" />
+    <ClInclude Include="Perek44.h" />
+    <ClInclude Include="Perek45.h" />
+    <ClInclude Include="Perek46.h" />
+    <ClInclude Include="Perek47.h" />
+    <ClInclude Include="Perek48.h" />
+    <ClInclude Include="Perek49.h" />
+    <ClInclude Include="Perek5.h" />
+    <ClInclude Include="Perek50.h" />
+    <ClInclude Include="Perek6.h" />
+    <ClInclude Include="Perek7.h" />
+    <ClInclude Include="Person.h" />
+    <ClInclude Include="RegMsg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Slider.h" />
+    <ClInclude Include="SpeedTable.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TabDlg.h" />
+    <ClInclude Include="TabExCtrl.h" />
+    <ClInclude Include="TabsFrame.h" />
+    <ClInclude Include="ToolExBar.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmap1.bmp" />
+    <Image Include="res\bitmap2.bmp" />
+    <Image Include="res\bitmap_o.bmp" />
+    <Image Include="res\bmp00001.bmp" />
+    <Image Include="res\bmp00002.bmp" />
+    <Image Include="res\ico00001.ico" />
+    <Image Include="res\ico00002.ico" />
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\mazalotNames.bmp" />
+    <Image Include="res\TabsFrame.ico" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\toolbar1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TabsFrame.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\TabsFrame.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="TabsFrame.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
